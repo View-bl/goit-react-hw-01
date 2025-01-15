@@ -1,0 +1,20 @@
+.FriendList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.FriendListItem {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.FriendListItem:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}

@@ -1,0 +1,124 @@
+.transactionTable {
+  margin: 0 auto 10px;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+  width: 50%;
+  margin-bottom: 80px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.transactionTable:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.tableHead {
+  background-color: #1e3a8a;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+}
+
+.tableHead::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: #fff;
+  opacity: 0.5;
+  transition: opacity 0.3s ease;
+}
+
+.tableHead:hover::after {
+  opacity: 1;
+}
+
+.tableRow {
+  border-bottom: 2px solid #ddd;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.tableRow:hover {
+  background-color: #45504b;
+  transform: translateX(5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.tableHeader {
+  color: rgb(240, 248, 255);
+  font-size: 2rem;
+  padding: 12px 20px;
+  border: 2px solid #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tableHeader:hover {
+  background-color: #009a1c;
+  border-color: #1e40af;
+  cursor: pointer;
+  color: #1e1d1d;
+  transform: scale(1.05);
+}
+
+.tableBody {
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.tableCell {
+  font-size: 1.5em;
+  padding: 12px 20px;
+  border: 1px solid #9a8c8c;
+  text-transform: capitalize;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.tableCell:hover {
+  background-color: #382f3500;
+  transform: translateY(-2px);
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+.tableCell.type {
+  font-weight: bold;
+  color: #1a202c;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.tableCell.type:hover {
+  color: #3b82f6;
+  transform: scale(1.05);
+  animation: pulse 0.5s ease infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tableRow:nth-child(even) .tableCell {
+  background-color: #f9f9f9;
+}
+
+.tableRow:nth-child(odd) .tableCell {
+  background-color: #fff;
+}
